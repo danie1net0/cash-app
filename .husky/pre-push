@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+echo "🔍 Executando verificações de pre-push..."
+
+# Verificando formatações com Prettier e ESLint
+echo "💅 Verificando formatações..."
+npm run format:check
+npm run lint
+
+echo "✅ Verificações de pre-push concluídas!"
