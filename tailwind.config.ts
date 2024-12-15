@@ -8,9 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        background: "url('/background.png')",
+        foreground: "url('/foreground.png')",
       },
     },
   },
