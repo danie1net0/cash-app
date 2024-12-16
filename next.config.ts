@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  env: {
+    apiUrl: process.env.API_URL,
+  }
 };
 
 export default nextConfig;
