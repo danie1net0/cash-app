@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .docker
+    entrypoint: .docker/entrypoint.sh
+    image: node-dev
+    container_name: cash-app
+    env_file:
+      - .env
+    ports:
+      - '${APP_PORT:-3000}:3000'
+    volumes:
+      - .:/home/node/app
+    networks:
+      - cash
+
+networks:
+  cash:
+    driver: bridge
