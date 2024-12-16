@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Metric from '@/app/components/metric';
 
 export default function Home() {
   return (
@@ -44,38 +45,9 @@ export default function Home() {
         </div>
 
         <div className="flex-1 flex items-end gap-4 p-4">
-          <div className="flex-1 flex items-center text-[#E7E6FB] bg-[#6660C899]/60 rounded-md py-4 px-6 gap-4 h-[60px]">
-            <Image src="/wind.svg" alt="Wind" width={32} height={32} />
-
-            <div>
-              <p className="font-normal text-xs">Vento</p>
-              <p className="font-bold text-sm leading-3">
-                <span className="text-lg leading-5">17</span>km/h
-              </p>
-            </div>
-          </div>
-
-          <div className="flex-1 flex items-center text-[#E7E6FB] bg-[#6660C899]/60 rounded-md py-4 px-6 gap-4 h-[60px]">
-            <Image src="/rain.svg" alt="Humidity" width={32} height={32} />
-
-            <div>
-              <p className="font-normal text-xs">Umidade</p>
-              <p className="font-bold text-sm leading-3">
-                <span className="text-lg leading-5">31</span>%
-              </p>
-            </div>
-          </div>
-
-          <div className="flex-1 flex items-center text-[#E7E6FB] bg-[#6660C899]/60 rounded-md px-6 gap-4 h-[60px]">
-            <Image src="/cloud.svg" alt="Rain" width={32} height={32} />
-
-            <div>
-              <p className="font-normal text-xs">Chuva</p>
-              <p className="font-bold text-sm leading-3">
-                <span className="text-lg leading-5">10</span>%
-              </p>
-            </div>
-          </div>
+          <Metric name={'Vento'} label={'km/h'} value={17} icon="wind" />
+          <Metric name={'Umidade'} label={'%'} value={31} icon="rain" />
+          <Metric name={'Chuva'} label={'%'} value={10} icon="cloud" />
         </div>
       </div>
     </div>
